@@ -1,0 +1,23 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "api/index.js",    // Ruta del archivo backend
+        "use": "@vercel/node"     // Usamos Node.js para ejecutar la función
+      },
+      {
+        "src": "index.html",      // Ruta del archivo HTML
+        "use": "@vercel/static"   // Usamos Vercel para servir archivos estáticos
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api",            // Ruta para la función backend
+        "dest": "/api/index.js"   // El archivo que manejará las solicitudes API
+      },
+      {
+        "src": "/(.*)",            // Cualquier otra solicitud será dirigida a archivos estáticos
+        "dest": "/$1"
+      }
+    ]
+  }

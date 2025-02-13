@@ -1,0 +1,43 @@
+/* css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+#champions-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.champion-card {
+    background-color: white;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.champion-card img {
+    width: 100%;
+    height: auto;
+}
+
+.champion-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
